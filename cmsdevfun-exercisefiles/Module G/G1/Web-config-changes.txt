@@ -1,0 +1,20 @@
+<!-- Change 1 -->
+  <episerver>
+    <applicationSettings 
+      httpCacheability="Public" 
+      httpCacheExpiration="02:00:00"
+      pageValidateTemplate="false" 
+      uiShowGlobalizationUserInterface="true" 
+      uiUrl="~/Secret/CMS/" 
+      urlRebaseKind="ToRootRelative" 
+      uiEditorCssPaths="~/Static/css/Editor.css" 
+      uiSafeHtmlTags="b,i,u,br,em,strong,p,a,img,ol,ul,li" />
+
+<!-- Change 2 -->
+    <section name="staticFile" allowLocation="true" type="EPiServer.Framework.Configuration.StaticFileSection, EPiServer.Framework" />
+  </configSections>
+  <staticFile expirationTime="03:00:00" />
+
+<!-- Change 3 -->
+    <staticContent>
+      <clientCache cacheControlMode="UseMaxAge" cacheControlMaxAge="365.00:00:00" />

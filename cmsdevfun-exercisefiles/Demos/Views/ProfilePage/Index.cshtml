@@ -1,0 +1,44 @@
+﻿@model AlloyDemo.Models.ViewModels.PageViewModel<ProfilePage>
+<h1>@(string.IsNullOrWhiteSpace(Model.CurrentPage.Profile.FirstName) ? "My" : Model.CurrentPage.Profile.FirstName + "'s") Profile</h1>
+<p class="introduction">
+    Modify your profile, and then click Save Changes.
+</p>
+@if (!EPiServer.Personalization.EPiServerProfile.Enabled)
+{
+    <div class="alert alert-danger">Profiles are not enabled.</div>
+}
+@if (string.IsNullOrEmpty(Model.CurrentPage.Profile.UserName))
+{
+    <div class="alert alert-info">You must log in to modify your profile.</div>
+}
+else
+{
+    <div class="row">
+        <div class="span8 clearfix">
+            @using (Html.BeginForm(actionName: "UpdateProfile", controllerName: null))
+            {
+                <div>
+                    User name: @Model.CurrentPage.Profile.UserName
+                </div>
+                <div>
+                    Display name: <input name="displayName" value="@Model.CurrentPage.Profile.DisplayName" />
+                </div>
+                <div>
+                    First name: <input name="firstName" value="@Model.CurrentPage.Profile.FirstName" />
+                </div>
+                <div>
+                    Last name: <input name="lastName" value="@Model.CurrentPage.Profile.LastName" />
+                </div>
+                <div>
+                    Title: <input name="title" value="@Model.CurrentPage.Profile.Title" />
+                </div>
+                <div>
+                    Company: <input name="company" value="@Model.CurrentPage.Profile.Company" />
+                </div>
+                <div>
+                    <input type="submit" value="Save Changes" />
+                </div>
+            }
+        </div>
+    </div>
+}

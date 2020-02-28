@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<languages>
+  <language name="English" id="en">
+    <editorstyleoptions>
+      <introduction>Introduction</introduction>
+      <alert_box>Alert Box</alert_box>
+      <headings>Headings</headings>
+      <header_2>Heading 2</header_2>
+      <header_3>Heading 3</header_3>
+    </editorstyleoptions>
+  </language>
+  <language name="Svenska" id="sv">
+    <editorstyleoptions>
+      <introduction>Introduktion</introduction>
+      <alert_box>Varningsruta</alert_box>
+      <headings>Rubrikerna</headings>
+      <header_2>Rubrik 2</header_2>
+      <header_3>Rubrik 3</header_3>
+    </editorstyleoptions>
+  </language>
+</languages>

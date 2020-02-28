@@ -1,0 +1,7 @@
+﻿        [CultureSpecific]
+        [Display(Name = "Main content area",
+            Description = "Drag and drop images, blocks, and pages with partial templates.",
+            GroupName = SystemTabNames.Content,
+            Order = 30)]
+        [AllowedTypes(typeof(StandardPage), typeof(BlockData), typeof(ImageData), typeof(ContentFolder), typeof(PdfFile))]
+        public virtual ContentArea MainContentArea { get; set; }

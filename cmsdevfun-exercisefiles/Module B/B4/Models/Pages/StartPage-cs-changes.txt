@@ -1,0 +1,1 @@
+    [AvailableContentTypes(Include = new[] { typeof(StandardPage) })]

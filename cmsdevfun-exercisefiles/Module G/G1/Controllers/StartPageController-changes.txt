@@ -1,0 +1,5 @@
+// add the following statements before calling return View();
+
+            Response.Cache.SetCacheability(System.Web.HttpCacheability.Public);
+            Response.Cache.SetExpires(System.DateTime.Now.AddHours(1));
+            Response.Cache.SetSlidingExpiration(true);

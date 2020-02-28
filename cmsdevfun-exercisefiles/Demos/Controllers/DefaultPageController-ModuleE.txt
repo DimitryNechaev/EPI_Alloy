@@ -1,0 +1,25 @@
+// import these namespaces
+using EPiServer.Core;
+using EPiServer.Filters;
+using EPiServer.Framework.Web;
+using EPiServer.Security;
+
+// add these statements to constructor
+
+            var ancestors = loader.Service.GetAncestors(currentPage.ContentLink);
+            var children = loader.Service.GetChildren<SitePageData>(ContentReference.StartPage);
+
+            var published = new FilterPublished(PagePublishedStatus.Published);
+            var publishedEvenIfExpired = new FilterPublished(PagePublishedStatus.PublishedIgnoreStopPublish);
+
+            var contentWithFullPageTemplate = new FilterTemplate
+            {
+                TemplateTypeCategories = TemplateTypeCategories.MvcView
+            };
+
+            var contentWithPartialTemplate = new FilterTemplate
+            {
+                TemplateTypeCategories = TemplateTypeCategories.MvcPartial
+            };
+
+            var readAccess = new FilterAccess(AccessLevel.Read);

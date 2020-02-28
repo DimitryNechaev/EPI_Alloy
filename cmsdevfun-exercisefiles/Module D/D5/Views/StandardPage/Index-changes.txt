@@ -1,0 +1,2 @@
+﻿// add to end of file
+@Html.PropertyFor(m => m.CurrentPage.Author)

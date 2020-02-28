@@ -1,0 +1,6 @@
+// add inside SitePageData class
+
+        [Display(Name = "Open Graph type",
+            GroupName = SiteTabNames.SEO, Order = 400)]
+        [SelectOne(SelectionFactoryType = typeof(OgTypeSelectionFactory))]
+        public virtual string OgType { get; set; }

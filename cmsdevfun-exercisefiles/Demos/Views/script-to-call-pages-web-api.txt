@@ -1,0 +1,19 @@
+<div>
+    <h4>Pages</h4>
+    <div>
+        <select id="listOfPages" size="5"></select>
+        <input type="button" value="Get Pages" id="getPagesButton" />
+        <div id="message"></div>
+        <script>
+            $('#getPagesButton').click(function () {
+                $.getJSON('/api/pages', function (response, status) {
+                    $('#message').text(status);
+                    for (var i = 0; i < response.length; i++) {
+                        var item = "<option value='" + response[i].Reference + "'>" + response[i].Name + " (" + response[i].Reference + ")</option>";
+                        $('#listOfPages').append(item);
+                    }
+                })
+            })
+        </script>
+    </div>
+</div>

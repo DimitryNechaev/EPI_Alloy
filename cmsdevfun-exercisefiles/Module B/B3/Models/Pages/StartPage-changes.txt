@@ -1,0 +1,12 @@
+﻿// decorate the StartPage class
+    [SiteStartIcon]
+
+// inherit from SitePageData
+    public class StartPage : SitePageData
+
+// add a new Admin-only property
+[CultureSpecific]
+[Display(Name = "Footer text",
+    Description = "The footer text will be shown at the bottom of every page.",
+    GroupName = SiteTabNames.SiteSettings, Order = 10)]
+public virtual string FooterText { get; set; }

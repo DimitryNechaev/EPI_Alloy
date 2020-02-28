@@ -1,0 +1,1 @@
+Only drag and drop one of these controllers into your AlloyTraining project.

@@ -1,0 +1,16 @@
+<!-- Change 1 -->
+<episerver>
+  <applicationSettings httpCacheability="Public" pageValidateTemplate="false" uiShowGlobalizationUserInterface="true" uiUrl="~/Secret/CMS/" urlRebaseKind="ToRootRelative" uiEditorCssPaths="~/Static/css/Editor.css" uiSafeHtmlTags="b,i,u,br,em,strong,p,a,img,ol,ul,li" />
+
+<!-- Change 2 -->
+<location path="Secret">
+
+<!-- Change 3 -->
+<location path="Secret/CMS/admin">
+
+<!-- Changes 4, 5, 6 -->
+<add name="ProtectedModules" virtualPath="~/Secret/" physicalPath="Modules\_Protected" type="EPiServer.Web.Hosting.VirtualPathNonUnifiedProvider, EPiServer.Framework" />
+
+<protectedModules rootPath="~/Secret/">
+
+<episerver.packaging protectedVirtualPath="~/Secret/" protectedPath="modules/_Protected" publicVirtualPath="~/modules/" publicPath="modules" installationMode="Code" />

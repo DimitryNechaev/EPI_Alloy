@@ -1,0 +1,23 @@
+<!-- add the following inside the <appSettings> element -->
+<add key="alloy:RegisterAdmin" value="true" />
+
+<!-- add the following inside the <episerver.framework> element -->
+<localization fallbackBehavior="Echo, MissingMessage, FallbackCulture" fallbackCulture="en">
+  <providers>
+    <add virtualPath="~/Resources/LanguageFiles" name="languageFiles" type="EPiServer.Framework.Localization.XmlResources.FileXmlLocalizationProvider, EPiServer.Framework.AspNet" />
+  </providers>
+</localization>
+
+<!-- add the following to disable the compiler warning in Razor files -->
+<system.codedom>
+  <compilers>
+    <compiler language="c#;cs;csharp" 
+              extension=".cshtml" 
+              compilerOptions="/nowarn:1702" 
+                   type="Microsoft.CSharp.CSharpCodeProvider, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+              warningLevel="4">
+      <providerOption name="CompilerVersion" value="v4.0" />
+      <providerOption name="WarnAsError" value="false" />
+    </compiler>
+  </compilers>
+</system.codedom>

@@ -1,0 +1,16 @@
+// import namespace
+
+using EPiServer.Logging;
+
+
+// declare field and set it
+
+        private readonly ILogger logger = LogManager.GetLogger();
+
+
+// write to log inside the Index action method
+
+            if (PageReference.IsNullOrEmpty(currentPage.SearchPageLink))
+            {
+                logger.Error("No 'Search page' is specified in 'Site settings'.");
+            }

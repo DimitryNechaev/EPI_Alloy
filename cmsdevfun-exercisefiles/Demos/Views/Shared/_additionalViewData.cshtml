@@ -1,0 +1,7 @@
+﻿<h4>additionalViewData</h4>
+<ul>
+    @foreach (KeyValuePair<string, object> item in ViewContext.ParentActionViewContext.ViewData)
+    {
+        <li>@item.Key: @item.Value</li>
+    }
+</ul>

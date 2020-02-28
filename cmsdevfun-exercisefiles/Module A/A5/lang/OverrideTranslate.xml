@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<languages>
+  <language name="English" id="en">
+    <episerver>
+      <cms>
+        <contentediting>
+          <toolbar>
+            <buttons>
+              <translate>
+                <executinglabel>Translating…</executinglabel>
+                <label>Boom!</label>
+                <title>Boom!</title>
+              </translate>
+            </buttons>
+          </toolbar>
+        </contentediting>
+      </cms>
+    </episerver>
+  </language>
+</languages>

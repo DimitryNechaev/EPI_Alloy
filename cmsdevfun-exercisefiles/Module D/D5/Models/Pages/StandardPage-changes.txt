@@ -1,0 +1,7 @@
+﻿// import namespace
+
+using AlloyTraining.Models.Blocks;
+
+// add property to StandardPage class
+
+        public virtual EmployeeBlock Author { get; set; }
