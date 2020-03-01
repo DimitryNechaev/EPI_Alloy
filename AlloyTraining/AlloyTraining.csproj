@@ -249,15 +249,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Media\AnyFile.cs" />
+    <Compile Include="Models\Media\ImageFile.cs" />
+    <Compile Include="Models\Media\PdfFile.cs" />
+    <Compile Include="Models\Media\SvgFile.cs" />
     <Compile Include="Models\Pages\StartPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SiteGroupNames.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\Blocks\" />
-    <Folder Include="Models\Media\" />
     <Folder Include="Models\Properties\" />
-    <Folder Include="Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="IndexingService\IndexingService.svc" />
@@ -315,6 +317,7 @@
     <Content Include="modules\_protected\CMS\CMS.zip" />
     <None Include="packages.config" />
     <Content Include="Views\StartPage\Index.cshtml" />
+    <Content Include="Views\Shared\PdfFile.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
