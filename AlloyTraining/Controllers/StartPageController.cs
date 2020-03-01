@@ -1,14 +1,18 @@
 ﻿using AlloyTraining.Models.Pages;
-using EPiServer.Web.Mvc;
+using EPiServer;
 using System.Web.Mvc;
 
 namespace AlloyTraining.Controllers
 {
-    public class StartPageController : PageController<StartPage>
+    public class StartPageController : PageControllerBase<StartPage>
     {
+        public StartPageController(IContentLoader loader) : base(loader)
+        {
+        }
+
         public ActionResult Index(StartPage currentPage)
         {
-            return View(currentPage);
+            return View(CreatePageViewModel(currentPage));
         }
     }
 }
