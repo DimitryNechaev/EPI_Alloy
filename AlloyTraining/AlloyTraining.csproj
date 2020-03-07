@@ -248,6 +248,7 @@
     <Compile Include="Business\ExtensionMethods\MiscExtensions.cs" />
     <Compile Include="Business\ExtensionMethods\SectionExtensionMethods.cs" />
     <Compile Include="Business\Initialization\CreatePagesInitializationModule.cs" />
+    <Compile Include="Business\Initialization\DisplayOptionsInitializationModule.cs" />
     <Compile Include="Business\Initialization\RegisterAdminInitializationModule.cs" />
     <Compile Include="Business\Initialization\RegisterDependencyResolverInitializationModule.cs" />
     <Compile Include="Business\SelectionFactories\OgTypeSelectionFactory.cs" />
@@ -289,6 +290,7 @@
     <Content Include="IndexingService\IndexingService.svc" />
     <Content Include="modules\_protected\EPiServer.Search.Cms\IndexContent.aspx" />
     <Content Include="Resources\LanguageFiles\ContentTypes.xml" />
+    <Content Include="Resources\LanguageFiles\DisplayOptions.xml" />
     <Content Include="Static\contenticons\epi-edu-icon-block.jpg" />
     <Content Include="Static\contenticons\epi-edu-icon-commerce.jpg" />
     <Content Include="Static\contenticons\epi-edu-icon-container.jpg" />
