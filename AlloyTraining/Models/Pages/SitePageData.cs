@@ -1,8 +1,10 @@
 ﻿using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
+using EPiServer.Shell.ObjectEditing;
 using EPiServer.Web;
 using System.ComponentModel.DataAnnotations;
+using AlloyTraining.Business.SelectionFactories;
 
 namespace AlloyTraining.Models.Pages
 {
@@ -29,5 +31,10 @@ namespace AlloyTraining.Models.Pages
             GroupName = SystemTabNames.Content, Order = 100)]
         [UIHint(UIHint.Image)] // filters to only show images
         public virtual ContentReference PageImage { get; set; }
+
+        [Display(Name = "Open Graph type",
+            GroupName = SiteTabNames.SEO, Order = 400)]
+        [SelectOne(SelectionFactoryType = typeof(OgTypeSelectionFactory))]
+        public virtual string OgType { get; set; }
     }
 }

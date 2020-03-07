@@ -1,9 +1,10 @@
 ﻿@using AlloyTraining.Models.ViewModels
 @using EPiServer.Web.Mvc.Html
 @model PageViewModel<AlloyTraining.Models.Pages.StartPage>
-<h1 @Html.EditAttributes(m => m.CurrentPage.Heading)>
-    @(Model.CurrentPage.Heading ?? Model.CurrentPage.Name)
-</h1>
+    <h1 @Html.EditAttributes(m => m.CurrentPage.Heading)>
+        @(Model.CurrentPage.Heading ?? Model.CurrentPage.Name)
+        <br/>Start page
+    </h1>
 <div>
     @Html.DisplayFor(m => m.CurrentPage.MainBody)
 </div>
