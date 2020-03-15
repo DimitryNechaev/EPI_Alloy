@@ -1,0 +1,19 @@
+﻿@using AlloyTraining.Models.ViewModels
+@using EPiServer.Web.Mvc.Html
+@model PageViewModel<AlloyTraining.Models.Pages.StartPage>
+    <h1 @Html.EditAttributes(m => m.CurrentPage.Heading)>
+        @(Model.CurrentPage.Heading ?? Model.CurrentPage.Name)
+        <br/>Start page - mobile
+    </h1>
+<div>
+    @Html.DisplayFor(m => m.CurrentPage.MainBody)
+</div>
+
+<div>
+    <ul>     
+        @foreach (var item in Model.CurrentPage.MainContentArea.FilteredItems)
+        {
+            <li>@Html.ContentLink(item.ContentLink)</li>
+        } 
+    </ul>
+</div>

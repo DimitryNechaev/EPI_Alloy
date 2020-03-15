@@ -241,6 +241,7 @@
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ItemGroup>
     <Compile Include="Business\DependencyResolvers\StructureMapDependencyResolver.cs" />
+    <Compile Include="Business\DisplayChannels\MobileDisplayChannel.cs" />
     <Compile Include="Business\ExtensionMethods\ContentExtensions.cs" />
     <Compile Include="Business\ExtensionMethods\ContentRecommendationExtensions.cs" />
     <Compile Include="Business\ExtensionMethods\HtmlHelperExtensions.cs" />
@@ -260,6 +261,7 @@
     <Compile Include="Controllers\ProductPagePartialController.cs" />
     <Compile Include="Controllers\StandardPageController.cs" />
     <Compile Include="Controllers\StartPageController.cs" />
+    <Compile Include="Controllers\StartPageMobileController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -285,11 +287,14 @@
     <Folder Include="Models\Blocks\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ClientResources\iPhone4\device-320x480.png" />
+    <Content Include="ClientResources\iPhone4\iPhone4.css" />
     <Content Include="ClientResources\Styles\help-text-icon.css" />
     <Content Include="ClientResources\Styles\widen-editors.css" />
     <Content Include="IndexingService\IndexingService.svc" />
     <Content Include="modules\_protected\EPiServer.Search.Cms\IndexContent.aspx" />
     <Content Include="Resources\LanguageFiles\ContentTypes.xml" />
+    <Content Include="Resources\LanguageFiles\DisplayChannels.xml" />
     <Content Include="Resources\LanguageFiles\DisplayOptions.xml" />
     <Content Include="Static\contenticons\epi-edu-icon-block.jpg" />
     <Content Include="Static\contenticons\epi-edu-icon-commerce.jpg" />
@@ -365,6 +370,7 @@
     <Content Include="Views\Shared\Full.cshtml" />
     <Content Include="Views\Shared\Narrow.cshtml" />
     <Content Include="Views\Shared\Wide.cshtml" />
+    <Content Include="Views\StartPageMobile\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
