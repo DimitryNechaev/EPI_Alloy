@@ -1,23 +1,26 @@
 ﻿@using AlloyTraining.Models.ViewModels
 @using AlloyTraining.Models.Pages
-@using EPiServer.Editor
+@using AlloyTraining
 @model PageViewModel<ProductPage>
 @{
     Layout = "~/Views/Shared/Layouts/_RightRelatedContent.cshtml";
 }
-<h1 @Html.EditAttributes(x => x.CurrentPage.Name)>
-    @Model.CurrentPage.Name
-    <br />Product page
-</h1>
+    <h1 @Html.EditAttributes(x => x.CurrentPage.Name)>
+        @Model.CurrentPage.Name
+        <br />Product page
+    </h1>
+
 <p class="introduction" @Html.EditAttributes(x => x.CurrentPage.MetaDescription)>@Model.CurrentPage.MetaDescription</p>
 <div class="row">
     <div class="span8 clearfix">
         @Html.PropertyFor(x => x.CurrentPage.MainBody)
     </div>
 </div>
+@Html.PropertyFor(m => m.CurrentPage.MainContentArea,
+    new { CssClass = "row equal-height", Tag = SiteTags.Wide })
+
 @section RelatedContent
 {
-    <!-- RELATED CONTENT -->
     <div @Html.EditAttributes(x => x.CurrentPage.PageImage)>
         <img src="@Url.ContentUrl(Model.CurrentPage.PageImage)" />
     </div>
@@ -25,11 +28,9 @@
         <h2 @Html.EditAttributes(x => x.CurrentPage.Name)>
             @Model.CurrentPage.Name
         </h2>
-        <p @Html.EditAttributes(x => x.CurrentPage.UniqueSellingPoints)>
-            @foreach(string usp in Model.CurrentPage.UniqueSellingPoints)
-            {
-                <span class="label label-inverse">@usp</span>
-            }
-        </p>
+        <p>@Html.PropertyFor(x => x.CurrentPage.UniqueSellingPoints)</p>
     </div>
+
+    @Html.PropertyFor(m => m.CurrentPage.RelatedContentArea,
+        new { CssClass = "row equal-height", Tag = SiteTags.Narrow })
 }
