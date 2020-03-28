@@ -1,6 +1,8 @@
-﻿using EPiServer.Core;
+﻿using AlloyTraining.Models.Blocks;
+using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace AlloyTraining.Models.Pages
@@ -19,6 +21,8 @@ namespace AlloyTraining.Models.Pages
             GroupName = SystemTabNames.Content,
             Order = 310)]
         public virtual XhtmlString MainBody { get; set; }
+
+        public virtual EmployeeBlock Author { get; set; }
 
     }
 }
