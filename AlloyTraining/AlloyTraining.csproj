@@ -256,6 +256,7 @@
     <Compile Include="Business\SelectionFactories\ThemeSelectionFactory.cs" />
     <Compile Include="Controllers\AllPagesPartialController.cs" />
     <Compile Include="Controllers\ContentFolderController.cs" />
+    <Compile Include="Controllers\ListingBlockController.cs" />
     <Compile Include="Controllers\PageControllerBase.cs" />
     <Compile Include="Controllers\PreviewPageController.cs" />
     <Compile Include="Controllers\ProductPageController.cs" />
@@ -269,6 +270,7 @@
     </Compile>
     <Compile Include="Models\Blocks\EditorialBlock.cs" />
     <Compile Include="Models\Blocks\EmployeeBlock.cs" />
+    <Compile Include="Models\Blocks\ListingBlock.cs" />
     <Compile Include="Models\Blocks\TeaserBlock.cs" />
     <Compile Include="Models\Media\AnyFile.cs" />
     <Compile Include="Models\Media\ImageFile.cs" />
@@ -281,6 +283,7 @@
     <Compile Include="Models\Properties\PropertyDecimal.cs" />
     <Compile Include="Models\ViewModels\ContentFolderViewModel.cs" />
     <Compile Include="Models\ViewModels\IPageViewModel.cs" />
+    <Compile Include="Models\ViewModels\ListingBlockViewModel.cs" />
     <Compile Include="Models\ViewModels\PageViewModel.cs" />
     <Compile Include="Models\ViewModels\PreviewPageViewModel.cs" />
     <Compile Include="Models\ViewModels\TeaserBlockViewModel.cs" />
@@ -381,6 +384,7 @@
     <Content Include="Views\TeaserBlockWide\Index.cshtml" />
     <Content Include="Views\PreviewPage\Index.cshtml" />
     <Content Include="Views\Shared\EmployeeBlock.cshtml" />
+    <Content Include="Views\ListingBlock\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
