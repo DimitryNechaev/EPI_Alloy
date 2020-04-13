@@ -257,6 +257,7 @@
     <Compile Include="Controllers\AllPagesPartialController.cs" />
     <Compile Include="Controllers\ContentFolderController.cs" />
     <Compile Include="Controllers\ListingBlockController.cs" />
+    <Compile Include="Controllers\NewsLandingPageController.cs" />
     <Compile Include="Controllers\PageControllerBase.cs" />
     <Compile Include="Controllers\PreviewPageController.cs" />
     <Compile Include="Controllers\ProductPageController.cs" />
@@ -276,6 +277,7 @@
     <Compile Include="Models\Media\ImageFile.cs" />
     <Compile Include="Models\Media\PdfFile.cs" />
     <Compile Include="Models\Media\SvgFile.cs" />
+    <Compile Include="Models\Pages\NewsLandingPage.cs" />
     <Compile Include="Models\Pages\ProductPage.cs" />
     <Compile Include="Models\Pages\SitePageData.cs" />
     <Compile Include="Models\Pages\StandardPage.cs" />
@@ -385,6 +387,7 @@
     <Content Include="Views\PreviewPage\Index.cshtml" />
     <Content Include="Views\Shared\EmployeeBlock.cshtml" />
     <Content Include="Views\ListingBlock\Index.cshtml" />
+    <Content Include="Views\NewsLandingPage\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
